@@ -77560,9 +77560,9 @@ ENDSEC
 	        continue;
 	      }
 	    //   console.debug(line);
-	      let tokens = line.split(/\t/);
+	      let tokens = line.split(' ');
 	    //   console.debug(tokens);
-	      let [filename, time, long, lat, alt, course, pitch, roll] = tokens;
+	      let [filename, time, long, lat, alt, course, pitch, roll, _] = tokens;
 	      time = parseFloat(time);
 	      long = parseFloat(long);
 	      lat = parseFloat(lat);
