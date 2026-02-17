@@ -70,15 +70,15 @@
 			
 			scene.addPointCloud(pointcloud);
 
-			viewer.scene.view.setView(
-				[2652381.103, 1249049.447, 411.636],
-				[2652364.407, 1249077.205, 399.696],
-			);
-
 			// viewer.scene.view.setView(
-			// 	[100,100,100],
-			// 	[0,0,0],
+			// 	[2652381.103, 1249049.447, 411.636],
+			// 	[2652364.407, 1249077.205, 399.696],
 			// );
+
+			viewer.scene.view.setView(
+				[100,100,100],
+				[0,0,0],
+			);
 
 			run();
 		});
@@ -95,13 +95,13 @@
 
 			// this file contains coordinates, orientation and filenames of the images:
 			// http://5.9.65.151/mschuetz/potree/resources/pointclouds/helimap/360/Drive2_selection/coordinates.txt
-			Potree.Images360Loader.load("http://5.9.65.151/mschuetz/potree/resources/pointclouds/helimap/360/Drive2_selection", viewer, params).then( images => {
-				viewer.scene.add360Images(images);
-			});
-			// Potree.Images360Loader.load("../src/images360examples/Coordinates", viewer, {}).then( images => {
+			// Potree.Images360Loader.load("http://5.9.65.151/mschuetz/potree/resources/pointclouds/helimap/360/Drive2_selection", viewer, params).then( images => {
 			// 	viewer.scene.add360Images(images);
-			// 	// images.focus(images.images[0]);
 			// });
+			Potree.Images360Loader.load("../src/images360examples/Coordinates", viewer, {}).then( images => {
+				viewer.scene.add360Images(images);
+				// images.focus(images.images[0]);
+			});
 
 			viewer.mapView.showSources(false);
 		}
